@@ -12,9 +12,9 @@ mongoose.connection.on('connected', () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
+app.use(cors())
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(cors())
 
 // Routes go here
 
